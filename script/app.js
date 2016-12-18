@@ -26,6 +26,7 @@ function LunchCheckController($scope) {
 
 function getItemsCount(string) {
     // Assuming browser supports ECMA5 - not polyfilling the filter function.
+    // Extra requirements for filtering out empty items are implemented.
     return string.split(',')
         .filter(function(item) { return item.trim().length != 0 })
         .length;
